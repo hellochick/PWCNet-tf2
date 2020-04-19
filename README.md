@@ -5,9 +5,7 @@ This repository provides the TensorFlow implementation of for paper ["PWC-Net: C
 
 ![](./sample_images/pwcnet_archi.png)
 
-I implemented the latest version "PWCDC-Net" of PWCNet in both **TensorFlow 2.0** and **TensorFlow 1.0 (based on "tf.compat.v1")**, so that you can easily compare the difference between tf 2.x and tf 1.x.
-
-The codes for tf 2.x version are modified and inherited from the [official pytorch version](https://github.com/NVlabs/PWC-Net/tree/master/PyTorch), while the codes for tf 1.x are implemented in a different way.
+I implemented the latest version "PWCDC-Net" of PWCNet in both **TensorFlow 2.0** and **TensorFlow 1.0 (based on "tf.compat.v1")**, so that you can easily compare the difference between tf 2.x and tf 1.x. The codes for tf 2.x version are modified and inherited from the [official pytorch version](https://github.com/NVlabs/PWC-Net/tree/master/PyTorch), while the codes for tf 1.x are implemented in a different way.
 
 ## Usage
 ### TF 2.x
@@ -60,8 +58,8 @@ For your information,
 ### Inference time
 | Dataset | TitanV |
 |:----:|:----:|
-| FlyingChairs | 0.0266 sec | 
-| MPI Sintel | |
+| FlyingChairs (384x512) | 0.026 sec | 
+| MPI Sintel (436x1024) | 0.038 sec |
 
 ## File hierarchy
 To use the pre-generated list for training and validation, you need to download and put the datasets as following hierarchy:
@@ -79,7 +77,7 @@ To use the pre-generated list for training and validation, you need to download 
 
 You can download the related datasets from 
 - FlyingChairs - [images pairs + flows](https://lmb.informatik.uni-freiburg.de/data/FlyingChairs/FlyingChairs.zip)
-- FlyingThings3D - [image pairs](https://lmb.informatik.uni-freiburg.de/data/SceneFlowDatasets_CVPR16/Release_april16/data/FlyingThings3D/raw_data/flyingthings3d__frames_cleanpass.tar) | [flows](https://lmb.informatik.uni-freiburg.de/data/SceneFlowDatasets_CVPR16/Release_april16/data/FlyingThings3D/derived_data/flyingthings3d__optical_flow.tar.bz2)
+- FlyingThings3D - [image pairs](https://lmb.informatik.uni-freiburg.de/data/SceneFlowDatasets_CVPR16/Release_april16/data/FlyingThings3D/raw_data/flyingthings3d__frames_cleanpass.tar) + [flows](https://lmb.informatik.uni-freiburg.de/data/SceneFlowDatasets_CVPR16/Release_april16/data/FlyingThings3D/derived_data/flyingthings3d__optical_flow.tar.bz2)
 - MPI_Sintel - [images pairs + flows (European mirror)](http://files.is.tue.mpg.de/sintel/MPI-Sintel-complete.zip) or [images pairs + flows (US mirror)](http://sintel.cs.washington.edu/MPI-Sintel-complete.zip)
 
 ## Clarification of implementation details
