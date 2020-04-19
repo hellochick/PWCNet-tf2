@@ -3,6 +3,8 @@
 # pwcnet-tf2
 This repository provides the TensorFlow implementation of for paper ["PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume"](https://arxiv.org/abs/1709.02371.pdf), which was presented in CVPR'18 (Oral). 
 
+![](./sample_images/pwcnet_archi.png)
+
 I implemented the latest version "PWCDC-Net" of PWCNet in both **TensorFlow 2.0** and **TensorFlow 1.0 (based on "tf.compat.v1")**, so that you can easily compare the difference between tf 2.x and tf 1.x.
 
 The codes for tf 2.x version are modified and inherited from the [official pytorch version](https://github.com/NVlabs/PWC-Net/tree/master/PyTorch), while the codes for tf 1.x are implemented in a different way.
@@ -117,10 +119,10 @@ If you find this implementation or the pre-trained models helpful, please consid
 ```
 @misc{Yang2020,
   author = {Hsuan-Kung, Yang},
-  title = {pwcnet-tf2},
+  title = {PWCNet-tf2},
   year = {2020},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/hellochick/pwcnet-tf2}}
+  howpublished = {\url{https://github.com/hellochick/PWCNet-tf2}}
 }
 ```
