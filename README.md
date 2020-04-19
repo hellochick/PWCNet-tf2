@@ -35,14 +35,14 @@ python train_v1_compat.py --data_dir $DATASET_ROOT_DIR --model_dir ./checkpoints
 --random_scale --random_flip
 ```
 
-## Results
+## Results on validation set 
 The [checkpoint](./checkpoints) is trained on the mixture of FlyingChairs and FlyingThings3D-HalfRes dataset (see the [description](#mixed-dataset) here). Please note that this checkpoint has not been fine-tuned on MPI Sintel dataset yet.
 
 For your information,
 - Training from scratch with **batch size 8** on **TitanV** takes about **4-5 days**. 
 - Training from scratch with **batch size 32** on **V100** takes about **2-3 days**.
 
-### Average End Point Error (AEPE) on validation set 
+### Average End Point Error (AEPE) 
 
 | FlyingChairs | MPI Sintel Clean (train set) | MPI Sintel Final (train set) |
 |:----:|:----:|:-----:|
