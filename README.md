@@ -7,7 +7,29 @@ This repository provides the TensorFlow implementation of for paper ["PWC-Net: C
 
 I implemented the latest version "PWCDC-Net" of PWCNet in both **TensorFlow 2.0** and **TensorFlow 1.0 (based on "tf.compat.v1")**, so that you can easily compare the difference between tf 2.x and tf 1.x. The codes for tf 2.x version are modified and inherited from the [official pytorch version](https://github.com/NVlabs/PWC-Net/tree/master/PyTorch), while the codes for tf 1.x are implemented in a different way.
 
-## Usage
+## Quick Start 
+### Install dependency 
+The codes are test on `Python 3.7`. Please run the following script to install the packages.
+```bash
+pip install -r requirements.txt
+```
+
+### Download pretrained model
+Run the following script to download the provided pretrained model from Google Drive.
+```bash
+./download_models.sh
+```
+Or directly get the pretrained model from [Google Drive](https://drive.google.com/file/d/1BV1oTmBG8ezWeePfb0es1TSuHRyvGt3t/view?usp=sharing).
+
+### Run Inference
+Run the following sample command for inference
+```
+python inference.py --image_0 sample_images/00003_img1.ppm --image_1 sample_images/00003_img2.ppm \
+--ckpt_path ./checkpoints/ckpt-1200000 
+```
+Then you will see an output file generated.
+
+## Other Usages
 ### TF 2.x
 ```bash
 # Training
@@ -21,10 +43,6 @@ python evaluate.py --data_dir $DATASET_ROOT_DIR --ckpt_path ./checkpoints/ckpt-1
 # Evaluation on MPI Sintel dataset
 python evaluate.py --data_dir $DATASET_ROOT_DIR --ckpt_path ./checkpoints/ckpt-1200000 \
 --val_list ./list/MPI_Sintel_Clean_train_list.txt
-
-# Inference on image pair
-python inference.py --image_0 sample_images/00003_img1.ppm --image_1 sample_images/00003_img2.ppm \
---ckpt_path ./checkpoints/ckpt-1200000 
 ```
 
 ### TF 2.x + tf.compat.v1
